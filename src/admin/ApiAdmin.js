@@ -1,5 +1,5 @@
 
-//const API ="http://localhost:8000/api" // backend server code //
+//const API ="http://localhost:8000/api" 
 
 const API = "https://mernappstore.herokuapp.com/api"
 

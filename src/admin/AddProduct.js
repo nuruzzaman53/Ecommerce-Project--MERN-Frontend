@@ -53,14 +53,14 @@ const AddProduct = () => {
 
     const changeHandler = name => event => {
         const value = name ==='photo' ? event.target.files[0]: event.target.value
-        //formData.set(name,value)
+        formData.set(name,value)
         setValues({...values,error:'',[name]:value})
     }
 
     const clickSubmit = event => {
         event.preventDefault()
         setValues({...values,loading:true,error:''})
-        createProduct(user._id,JSON.stringify(values),token).then(data => {
+        createProduct(user._id,values,token).then(data => {
           if(data.error){
             setValues({...values,error: data.error})
           } else {

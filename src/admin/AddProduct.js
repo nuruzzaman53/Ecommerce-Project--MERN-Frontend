@@ -60,7 +60,7 @@ const AddProduct = () => {
     const clickSubmit = event => {
         event.preventDefault()
         setValues({...values,loading:true,error:''})
-        createProduct(user._id,values,token).then(data => {
+        createProduct(user._id,formData,token).then(data => {
           if(data.error){
             setValues({...values,error: data.error})
           } else {
@@ -173,7 +173,7 @@ const AddProduct = () => {
 
    const showLoading = () => (
 
-      loading && (<div className='alert alert-success'><h4>Loading......</h4></div>)
+      loading && (<div className='alert alert-success'><h6>Loading......</h6></div>)
    )
 
    const adminLinks = () => {

@@ -6,7 +6,6 @@ import '../custom_bootstrap.css'
 import {getCategories,deleteCategory} from './ApiAdmin'
 import moment from 'moment'
 
-const API ="http://localhost:8000/api" // backend server code //
 
 const ManageCategory = () => {
 

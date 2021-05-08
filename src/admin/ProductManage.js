@@ -92,7 +92,7 @@ const AdminDashboard = () => {
 
                     <tr key={i}>
 
-                      <td><LazyLoadImage src={`${API}/product/photo/${p._id}`} width='80px' /> </td>
+                      <td><LazyLoadImage src={`${API}/product/photo/${p._id}`} width='50px' /> </td>
 
                       <td>{p.name} </td>
 

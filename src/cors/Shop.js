@@ -45,29 +45,6 @@ const Shop = () => {
         })
     }
 
-    const loadMore = () => {
-        let toSkip = limit + skip
-        getFilteredProducts(toSkip,limit,myFilters.filters).then(data => {
-            if (data.error) {
-                setError(data.error)
-            } else {
-                setFilteredResults([...filteredResults,...data.data])
-                setSize(data.size)
-                setSkip(0)
-            }
-        })
-    }
-
-    const loadMoreButton = () => {
-        return(
-            size >0 && size >= limit &&(
-            <button className='btn btn-primary' onClick={loadMore}>
-                Load More Books
-            </button>
-            
-        ))
-    }
-
     useEffect(() => {
          init() 
          loadFilteredResults(skip,limit,myFilters.filters)

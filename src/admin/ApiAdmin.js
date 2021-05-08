@@ -76,7 +76,7 @@ export const updateCategory = (userId,token,categoryId,category) => {
       Accept:'application/json',
       Authorization:`Bearer ${token}` 
     },
-    body: JSON.stringify({category})
+    body: category
   })
   .then(response => { return response.json()})
   .catch(err => {console.log(err)} )
